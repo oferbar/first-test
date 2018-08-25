@@ -16,9 +16,7 @@ module.exports = {
                 $ = cheerio.load(body);
                 var links = $('a'); //jquery get all hyperlinks
                 // split title to tokens
-                var title = $("title").text();
-                var tokens = title.split(" ");
-                tokens.each(function(x) {
+                $("title").text().split(" ").forEach(function(x) {
                     t.index[x] = url;
                 });
 
